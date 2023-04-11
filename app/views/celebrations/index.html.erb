@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag "style.css", "data-turbo-track": "reload" %>
+
+<!-- main container for background -->
+<div class="main-container">
+  <!-- background container for background effect -->
+  <div class="background-container">
+    <!-- big corner circle -->
+    <div class="top-left-circle"></div>
+
+    <!-- big corner circle -->
+    <div class="extreme-right-circle">
+      <!-- right circle over the extreme right circle -->
+      <div class="right-circle"></div>
+
+      <!-- top right circle -->
+      <div class="top-right-circle"></div>
+    </div>
+
+    <!-- big corner circle -->
+    <div class="extreme-bottom-left-circle">
+      <!-- bottom right circle  -->
+      <div class="bottom-right-circle"></div>
+    </div>
+
+    <!-- big corner circle -->
+    <div class="extreme-bottom-right-circle"></div>
+  </div>
+</div>
+
+<!-- content holder container -->
+<div class="content-holder-container celebration-container">
+  <div class="congratulation-card">
+    <!-- put your card tags here -->
+    <div class="message">
+      <div class="congratulation-message">
+        <h1>
+          <%= t("congratulation") %>
+        </h1>
+        <p>
+          <%= t("greeting_text") %>
+        </p>
+        <p class="details" id="deal_name"></p>
+        <p id="company_name"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag("celebration.js")  %>

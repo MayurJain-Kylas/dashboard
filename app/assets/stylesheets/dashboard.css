@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #e6e7ee;
+}
+
+.content-holder-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.left-container {
+  flex: 1;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.tenant-graph-holder {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.circle-graph {
+  height: 100%;
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #e6e7ee;
+  background-clip: border-box;
+  border: 0.0625rem solid rgba(243, 247, 250, 0.05);
+  border-radius: 0.55rem;
+  border-color: #d1d9e6 !important;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
+  padding: 2rem;
+}
+
+.circle-graph .title-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.circle-graph .tenant-title {
+  font-family: "Nunito Sans";
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #31344b;
+}
+.circle-graph .tenant-span {
+  font-family: "Nunito Sans";
+  font-size: 1rem;
+  font-weight: 400 !important;
+  color: #44476a !important;
+}
+.circle-graph .tenant-graph-offset-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex: 1;
+}
+.circle-graph .tenant-graph-border {
+  height: 18rem;
+  width: 18rem;
+  margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff !important;
+  border-color: #d1d9e6 !important;
+  border: 0.0625rem solid #fafbfe !important;
+  background-color: #e6e7ee !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.circle-graph .tenant-graph-border .donut-graph {
+  height: 100%;
+  width: 100%;
+  transform: rotate(-40deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-graph .tenant-graph-border .donut-graph .donut-count {
+  position: absolute;
+  transform: rotate(40deg);
+  color: #44476a !important;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center !important;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.circle-graph .tenant-graph-offset-holder .last-month-tenant-holder {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.tenant-graph-offset-holder .last-month-tenant-holder .last-month-tenant-title {
+  color: #44476a !important;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  text-align: center !important;
+  font-size: 1.5rem;
+  word-wrap: break-word;
+}
+.tenant-graph-offset-holder .last-month-tenant-holder .last-month-tenant-count {
+  color: #44476a !important;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center !important;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.free-tenant-graph {
+  margin-right: 10px;
+}
+.paid-tenant-graph {
+  margin-left: 10px;
+}
+
+.active-user-graph-container {
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #e6e7ee;
+  background-clip: border-box;
+  border: 0.0625rem solid rgba(243, 247, 250, 0.05);
+  border-radius: 0.55rem;
+  border-color: #d1d9e6 !important;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
+  margin-top: 20px;
+  width: 100%;
+  height: 55%;
+  align-self: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.active-user-graph-border {
+  flex: 1;
+  height: 100%;
+  margin-right: 20px;
+  padding: 20px;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff !important;
+  border-color: #d1d9e6 !important;
+  border: 0.0625rem solid #fafbfe !important;
+  background-color: #e6e7ee !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.active-user-graph {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+.active-user-graph-offset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 18rem;
+  padding: 10px;
+}
+.active-user-graph-offset .active-user-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  text-align: center !important;
+  font-size: 2rem;
+  word-wrap: break-word;
+  color: #31344b;
+}
+
+.active-user-offset-holder {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.active-user-offset-holder .offset-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.active-user-offset-holder .user-offset-indicator {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.active-user-offset-holder .monthly-offset-indicator {
+  background-color: #626afa;
+}
+.active-user-offset-holder .weekly-offset-indicator {
+  background-color: #2ec3f9;
+}
+.active-user-offset-holder .daily-offset-indicator {
+  background-color: #f5b759;
+}
+
+.offset-holder .user-offset-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #44476a;
+  word-wrap: break-word;
+}
+
+.right-container {
+  height: 100%;
+  width: 30%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.active-user-card {
+  display: flex;
+  width: 100%;
+  height: 23%;
+  margin-bottom: 10px;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #e6e7ee;
+  background-clip: border-box;
+  border: 0.0625rem solid rgba(243, 247, 250, 0.05);
+  border-radius: 0.55rem;
+  border-color: #d1d9e6 !important;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.active-user-card .icon-holder {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  position: relative;
+  box-shadow: rgb(184, 185, 190) 2px 2px 5px inset,
+    rgb(255, 255, 255) -3px -3px 7px inset !important;
+  border: 0.0625rem solid rgb(250, 251, 254) !important;
+  background-color: rgb(230, 231, 238) !important;
+}
+
+.active-user-card .icon-holder::after {
+  content: "";
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.active-user-icon {
+  position: absolute;
+  z-index: 9999;
+}
+
+.active-user-card .weekly-deal-won-icon-holder::after {
+  background-color: #2ec3f944;
+}
+.active-user-card .monthly-user-icon-holder::after {
+  background-color: #626afa25;
+}
+
+.active-user-card .weekly-user-icon-holder::after {
+  background-color: #2ec3f92d;
+}
+
+.active-user-card .daily-user-icon-holder::after {
+  background-color: #ffd90027;
+}
+
+.active-user-card .icon-holder {
+  color: #ffd700;
+}
+
+.active-user-card .icon-holder .fa-calendar {
+  color: #626afa;
+}
+
+.active-user-card .icon-holder .fa-line-chart {
+  color: #2ec3f9;
+}
+
+.active-user-card .icon-holder .fa-sun-o {
+  color: #f5b759;
+}
+
+.daily-active-user-container {
+  margin-bottom: 0px;
+}
+
+.active-user-card .title-holder {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  padding: 4rem;
+  padding-left: 1rem;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.active-user-card .active-user-count {
+  color: #44476a !important;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center !important;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.3;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+.active-user-card .active-user-title {
+  color: #44476a !important;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  text-align: center !important;
+  font-size: 1.6rem;
+  word-wrap: break-word;
+}

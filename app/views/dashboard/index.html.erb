@@ -1,0 +1,197 @@
+<%= stylesheet_link_tag "dashboard", "data-turbo-track": "reload" %>
+
+<!-- main content holder -->
+<div class="content-holder-container">
+  <!-- left content holder container -->
+  <section class="left-container">
+    <!-- tenant holder -->
+    <div class="tenant-graph-holder">
+      <!-- free user donut graph -->
+      <div class="circle-graph free-tenant-graph">
+        <!-- title container -->
+        <div class="title-holder">
+          <span class="tenant-title"><%= t("free_tenant_register")%></span>
+          <!-- <span class="tenant-span">This Month</span> -->
+        </div>
+
+        <!-- tenant graph and offset holder -->
+        <div class="tenant-graph-offset-holder">
+          <!-- graph and offsets -->
+          <div class="tenant-graph-border">
+            <!-- actual tenant graph holder -->
+            <div class="donut-graph" id="donut-graph-free">
+              <span class="donut-count">100</span>
+            </div>
+          </div>
+
+          <div class="last-month-tenant-holder">
+            <span class="last-month-tenant-title">Last Month</span>
+            <span class="last-month-tenant-count">999</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- paid user donut graph -->
+      <div class="circle-graph paid-tenant-graph">
+        <!-- title container -->
+        <div class="title-holder">
+          <span class="tenant-title"><%= t("paid_tenant_register")%></span>
+          <!-- <span class="tenant-span">This Month</span> -->
+        </div>
+
+        <!-- tenant graph and offset holder -->
+        <div class="tenant-graph-offset-holder">
+          <!-- graph and offsets -->
+          <div class="tenant-graph-border">
+            <!-- actual tenant graph holder -->
+            <div class="donut-graph" id="donut-graph-paid">
+              <span class="donut-count">100</span>
+            </div>
+          </div>
+
+          <div class="last-month-tenant-holder">
+            <span class="last-month-tenant-title">Last Month</span>
+            <span class="last-month-tenant-count">555</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- active user multi line graph container -->
+    <div class="active-user-graph-container">
+      <!-- active user graph border -->
+      <div class="active-user-graph-border">
+        <div class="active-user-graph"></div>
+      </div>
+
+      <!-- active user graph offset -->
+      <div class="active-user-graph-offset">
+        <!-- active user title -->
+        <span class="active-user-title">Active Users</span>
+
+        <!-- active user offset holder -->
+        <div class="active-user-offset-holder">
+          <!-- offsets -->
+
+          <!-- monthly -->
+          <div class="offset-holder monthly-active-user-holder">
+            <div class="user-offset-indicator monthly-offset-indicator"></div>
+            <span class="user-offset-title monthly-active-user-title">
+              <%= t("monthly_active_user") %>
+            </span>
+          </div>
+
+          <!-- weekly -->
+          <div class="offset-holder weekly-active-user-holder">
+            <div class="user-offset-indicator weekly-offset-indicator"></div>
+            <span class="user-offset-title weekly-active-user-title">
+              <%= t("weekly_active_user") %>
+            </span>
+          </div>
+
+          <!-- daily -->
+          <div class="offset-holder daily-active-user-holder">
+            <div class="user-offset-indicator daily-offset-indicator"></div>
+            <span class="user-offset-title daily-active-user-title">
+              <%= t("daily_active_user") %>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- right content holder container -->
+  <section class="right-container">
+    <!-- weekly deal won active user -->
+    <div class="active-user-card weekly-deal-won-container">
+      <div class="icon-holder weekly-deal-won-icon-holder">
+        <i class="active-user-icon fa-3x fa fa-trophy"></i>
+      </div>
+      <div class="title-holder daily-user-title-holder">
+        <span class="active-user-count daily-active-user-count">200</span>
+        <span class="active-user-title daily-active-user-title">
+          <%= t("weekly_deals_won") %>
+        </span>
+      </div>
+    </div>
+
+    <!-- Monthly Active Users -->
+    <div class="active-user-card monthly-active-user-container">
+      <div class="icon-holder monthly-user-icon-holder">
+        <i class="active-user-icon fa-2x fa fa-calendar" aria-hidden="true"></i>
+      </div>
+      <div class="title-holder monthly-user-title-holder">
+        <span class="active-user-count monthly-active-user-count">200K</span>
+        <span class="active-user-title monthly-active-user-title">
+          <%= t("monthly_active_user") %>
+        </span>
+      </div>
+    </div>
+
+    <!-- Weekly Active Users -->
+    <div class="active-user-card weekly-active-user-container">
+      <div class="icon-holder weekly-user-icon-holder">
+        <i
+          class="active-user-icon fa-2x fa fa-line-chart"
+          aria-hidden="true"
+        ></i>
+      </div>
+      <div class="title-holder weekly-user-title-holder">
+        <span class="active-user-count weekly-active-user-count">800K</span>
+        <span class="active-user-title weekly-active-user-title">
+          <%= t("weekly_active_user") %>
+        </span>
+      </div>
+    </div>
+
+    <!-- Daily Active Users -->
+    <div class="active-user-card daily-active-user-container">
+      <div class="icon-holder daily-user-icon-holder">
+        <i class="active-user-icon fa-2x fa fa-sun-o" aria-hidden="true"></i>
+      </div>
+      <div class="title-holder daily-user-title-holder">
+        <span class="active-user-count daily-active-user-count">1M</span>
+        <span class="active-user-title daily-active-user-title">
+          <%= t("daily_active_user") %>
+        </span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%= javascript_include_tag("donutty.js") %>
+<%= javascript_include_tag("vanilla.js") %>
+<%= javascript_include_tag("script.js") %>
+
+<script>
+  new Donutty("#donut-graph-free", {
+    circle: false,
+    round: true,
+    min: 0,
+    max: 100,
+    value: 70,
+    radius: 100,
+    thickness: 15,
+    padding: 10,
+    color: "green",
+    anchor: "top",
+    dir: "rtl",
+    bg: "transparent",
+  });
+
+  new Donutty("#donut-graph-paid", {
+    circle: false,
+    round: true,
+    min: 0,
+    max: 100,
+    value: 40,
+    radius: 100,
+    thickness: 15,
+    padding: 10,
+    color: "green",
+    anchor: "top",
+    dir: "rtl",
+    bg: "transparent",
+  });
+</script>

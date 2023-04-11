@@ -1,0 +1,56 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  free_tenant_register: "Free Tenants Registered"
+  paid_tenant_register: "Paid Tenants Registered"
+  weekly_deals_won: "Weekly Deals Won"
+  monthly_active_user: "Monthly Active Users"
+  weekly_active_user: "Weekly Active Users"
+  daily_active_user: "Daily Active Users"
+  congratulation: "Congratulations"
+  greeting_text: "We have won the deal"
+  deal_added: "Deal Added Successfully"
+  deal_not_added: "Deal Not Added"
+  webhook_created: "Webhook Created"
+  webhook__not_created: "Webhook Not Created"
+  deal_not_found: 'Deal not found'
+  success: "SUCCESS"
+  failure: "FAILURE"
+  invalid: "INVALID"
+  deal_is_won: "Latest Deal is Won"
+  deal_is_not_won: "Latest Deal is Not Won"
+  tenant_not_found: "Tenant not found"
+  tenant_already_exist: "Tenant already exist"
+  congratulations: "Congratulations"
+
+
